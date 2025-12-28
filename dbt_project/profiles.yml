@@ -1,0 +1,10 @@
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: impala
+      host: "{{ env_var('IMPALA_HOST') }}"
+      port: 21050
+      auth_type: nosasl
+      schema: staging
+      threads: 4

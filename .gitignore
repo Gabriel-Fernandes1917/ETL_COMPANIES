@@ -1,0 +1,5 @@
+etl_companies/
+logs/
+dbt_packages/
+target/
+.env

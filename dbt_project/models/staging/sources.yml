@@ -1,0 +1,262 @@
+version: 2
+
+sources:
+  - name: raws
+    description: "Raw datas about companies"
+    schema: raws
+
+    tables:
+      - name: cnaes
+        description: "Table with companies cnaes"
+        columns:
+          - name: codigo
+            description: "cnaes code"
+            tests:
+              - not_null:
+          - name: descricao
+            description: "cnaes description"
+
+      - name: empresas
+        description: "Table with companies"
+        columns:
+          - name: cnpj_basico
+            description: "the company cnpj"
+            tests:
+              - not_null: 
+          - name: nome_empresarial
+            description: "companies names"
+          - name: natureza_juridica
+            description: "legal natures of companies"
+          - name: qualificacao_do_responsavel
+            description: "qualification of the person responsible"
+          - name: capital_social_da_empresa
+            description: "social capital the company"
+          - name: porte_da_empresa
+            description: "company size"
+          - name: ente_federativo_responsavel
+            description: "responsible"
+
+      - name: estabelecimentos
+        description: "CNPJ establishments (branches and headquarters)"
+
+        columns:
+          - name: cnpj_basico
+            description: "Base CNPJ of the company"
+            tests:
+              - not_null:
+
+          - name: cnpj_ordem
+            description: "Branch order number of the CNPJ"
+
+          - name: cnpj_dv
+            description: "Check digits of the CNPJ"
+
+          - name: identificador_matriz_filial
+            description: "Indicates whether the establishment is headquarters (1) or branch (2)"
+
+          - name: nome_fantasia
+            description: "Trade name of the establishment"
+
+          - name: situacao_cadastral
+            description: "Current registration status of the establishment"
+
+          - name: data_situacao_cadastral
+            description: "Date when the current registration status became effective"
+
+          - name: motivo_situacao_cadastral
+            description: "Reason code for the current registration status"
+
+          - name: nome_da_cidade_no_exterior
+            description: "City name if the establishment is located abroad"
+
+          - name: pais
+            description: "Country where the establishment is located"
+            tests:
+              - not_null:
+
+          - name: data_de_inicio_atividade
+            description: "Date when the establishment started its activities"
+
+          - name: cnae_fiscal_principal
+            description: "Primary CNAE (economic activity code)"
+            tests:
+              - not_null:
+
+          - name: cnae_fiscal_secundaria
+            description: "Secondary CNAE codes"
+
+          - name: tipo_de_logradouro
+            description: "Street type (Rua, Avenida, Travessa, etc.)"
+
+          - name: logradouro
+            description: "Street name"
+
+          - name: numero
+            description: "Street number"
+
+          - name: complemento
+            description: "Additional address information"
+
+          - name: bairro
+            description: "Neighborhood"
+
+          - name: cep
+            description: "Postal code"
+
+          - name: uf
+            description: "State (federative unit)"
+
+          - name: municipio
+            description: "Municipality code"
+            tests:
+              - not_null:
+
+          - name: ddd_1
+            description: "Area code of the first phone number"
+
+          - name: telefone_1
+            description: "First phone number"
+
+          - name: ddd_2
+            description: "Area code of the second phone number"
+
+          - name: telefone_2
+            description: "Second phone number"
+
+          - name: ddd_do_fax
+            description: "Fax area code"
+
+          - name: fax
+            description: "Fax number"
+
+          - name: correio_eletronico
+            description: "Email address"
+
+          - name: situacao_especial
+            description: "Special legal situation (if applicable)"
+
+          - name: data_situacao_especial
+            description: "Date when the special situation started"
+
+      - name: motivos
+        description: "reason for the situation"
+        columns:
+          - name: codigo
+            description: "code of the reason"
+            tests:
+              - not_null:
+
+          - name: descricao
+            description: "reason description"
+
+      - name: municipios
+        description: "municipality"
+        columns:
+          - name: codigo
+            description: "code of the reason"
+            tests:
+              - not_null:
+
+          - name: descricao
+            description: "reason description"
+
+      - name: naturezas_juridicas
+        description: "legal nature"
+        columns:
+          - name: codigo
+            description: "code of the legal nature"
+            tests:
+              - not_null:
+
+          - name: descricao
+            description: "legal nature description"
+
+      - name: paises
+        description: "countries"
+        columns:
+          - name: codigo
+            description: "code of the country"
+            tests:
+              - not_null:
+
+          - name: descricao
+            description: "country description"
+
+      - name: qualificacoes_de_socios
+        description: "qualification of partners"
+        columns:
+          - name: codigo
+            description: "code of the qualification of partners"
+            tests:
+              - not_null:
+
+          - name: descricao
+            description: "qualification of partners description"
+
+      - name: simples
+        description: "CNPJ Simples Nacional and MEI option status"
+
+        columns:
+          - name: cnpj_basico
+            description: "Base CNPJ of the company"
+            tests:
+              - not_null:
+
+          - name: opcao_pelo_simples
+            description: "Indicates whether the company opted for Simples Nacional (S or N)"
+
+          - name: data_de_opcao_pelo_simples
+            description: "Date when the company opted for Simples Nacional"
+
+          - name: data_de_exclusao_do_simples
+            description: "Date when the company was excluded from Simples Nacional"
+
+          - name: opcao_pelo_mei
+            description: "Indicates whether the company opted for MEI (S or N)"
+
+          - name: data_de_opcao_pelo_mei
+            description: "Date when the company opted for MEI"
+
+          - name: data_de_exclusao_do_mei
+            description: "Date when the company was excluded from MEI"
+
+      - name: socios
+        description: "Partners, shareholders and legal representatives of CNPJ entities"
+
+        columns:
+          - name: cnpj_basico
+            description: "Base CNPJ of the company"
+            tests:
+              - not_null:
+
+          - name: identificador_de_socio
+            description: "Indicates whether the person is a partner, administrator or legal representative"
+
+          - name: nome_do_socio_ou_razao_social
+            description: "Name of the partner or corporate name if legal entity"
+
+          - name: cpf_cnpj_do_socio
+            description: "CPF or CNPJ of the partner"
+
+          - name: qualificacao_do_socio
+            description: "Legal qualification of the partner"
+
+          - name: data_de_entrada_sociedade
+            description: "Date when the partner entered the company"
+
+          - name: pais
+            description: "Country of the partner (if foreign)"
+            tests:
+              - not_null:
+
+          - name: representante_legal
+            description: "Indicates if the partner has a legal representative"
+
+          - name: nome_do_representante
+            description: "Name of the legal representative"
+
+          - name: qualificacao_do_representante_legal
+            description: "Legal qualification of the representative"
+
+          - name: faixa_etaria
+            description: "Age range of the partner"

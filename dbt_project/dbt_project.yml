@@ -32,7 +32,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_project:
     staging:
-      schema: companies
       +materialized: view
       tags: ['staging']
 
@@ -41,6 +40,5 @@ models:
       tags: ['intermediate']
 
     marts:
-      schema: companies
       materialized: table
       tags: ['marts']

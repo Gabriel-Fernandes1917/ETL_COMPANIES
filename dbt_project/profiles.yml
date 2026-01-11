@@ -6,5 +6,5 @@ dbt_project:
       host: "{{ env_var('IMPALA_HOST') }}"
       port: 21050
       auth_type: nosasl
-      schema: staging
+      schema: companies
       threads: 4

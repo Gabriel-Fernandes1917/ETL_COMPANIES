@@ -12,7 +12,7 @@ sources:
           - name: codigo
             description: "cnaes code"
             tests:
-              - not_null:
+              - not_null
           - name: descricao
             description: "cnaes description"
 
@@ -22,7 +22,7 @@ sources:
           - name: cnpj_basico
             description: "the company cnpj"
             tests:
-              - not_null: 
+              - not_null 
           - name: nome_empresarial
             description: "companies names"
           - name: natureza_juridica
@@ -43,7 +43,7 @@ sources:
           - name: cnpj_basico
             description: "Base CNPJ of the company"
             tests:
-              - not_null:
+              - not_null
 
           - name: cnpj_ordem
             description: "Branch order number of the CNPJ"
@@ -60,7 +60,7 @@ sources:
           - name: situacao_cadastral
             description: "Current registration status of the establishment"
 
-          - name: data_situacao_cadastral
+          - name: data_da_situacao_especial
             description: "Date when the current registration status became effective"
 
           - name: motivo_situacao_cadastral
@@ -72,7 +72,7 @@ sources:
           - name: pais
             description: "Country where the establishment is located"
             tests:
-              - not_null:
+              - not_null
 
           - name: data_de_inicio_atividade
             description: "Date when the establishment started its activities"
@@ -80,7 +80,7 @@ sources:
           - name: cnae_fiscal_principal
             description: "Primary CNAE (economic activity code)"
             tests:
-              - not_null:
+              - not_null
 
           - name: cnae_fiscal_secundaria
             description: "Secondary CNAE codes"
@@ -109,7 +109,7 @@ sources:
           - name: municipio
             description: "Municipality code"
             tests:
-              - not_null:
+              - not_null
 
           - name: ddd_1
             description: "Area code of the first phone number"
@@ -144,7 +144,7 @@ sources:
           - name: codigo
             description: "code of the reason"
             tests:
-              - not_null:
+              - not_null
 
           - name: descricao
             description: "reason description"
@@ -155,7 +155,7 @@ sources:
           - name: codigo
             description: "code of the reason"
             tests:
-              - not_null:
+              - not_null
 
           - name: descricao
             description: "reason description"
@@ -166,7 +166,7 @@ sources:
           - name: codigo
             description: "code of the legal nature"
             tests:
-              - not_null:
+              - not_null
 
           - name: descricao
             description: "legal nature description"
@@ -177,7 +177,7 @@ sources:
           - name: codigo
             description: "code of the country"
             tests:
-              - not_null:
+              - not_null
 
           - name: descricao
             description: "country description"
@@ -188,7 +188,7 @@ sources:
           - name: codigo
             description: "code of the qualification of partners"
             tests:
-              - not_null:
+              - not_null
 
           - name: descricao
             description: "qualification of partners description"
@@ -200,7 +200,7 @@ sources:
           - name: cnpj_basico
             description: "Base CNPJ of the company"
             tests:
-              - not_null:
+              - not_null
 
           - name: opcao_pelo_simples
             description: "Indicates whether the company opted for Simples Nacional (S or N)"
@@ -227,7 +227,7 @@ sources:
           - name: cnpj_basico
             description: "Base CNPJ of the company"
             tests:
-              - not_null:
+              - not_null
 
           - name: identificador_de_socio
             description: "Indicates whether the person is a partner, administrator or legal representative"
@@ -235,7 +235,7 @@ sources:
           - name: nome_do_socio_ou_razao_social
             description: "Name of the partner or corporate name if legal entity"
 
-          - name: cpf_cnpj_do_socio
+          - name: cnpj_cpf_do_socio
             description: "CPF or CNPJ of the partner"
 
           - name: qualificacao_do_socio
@@ -247,7 +247,7 @@ sources:
           - name: pais
             description: "Country of the partner (if foreign)"
             tests:
-              - not_null:
+              - not_null
 
           - name: representante_legal
             description: "Indicates if the partner has a legal representative"

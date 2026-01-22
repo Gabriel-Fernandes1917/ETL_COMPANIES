@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_motivos
+    description: "fact motivos"
+
+    columns:
+      - name: codigo
+        description: "motivos"
+        data_tests:
+          - not_null 
+      - name: descricao
+        description: "motivos description"
+        data_tests:
+          - not_null

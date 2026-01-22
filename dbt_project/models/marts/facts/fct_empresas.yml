@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_empresas
+    description: "fact companies"
+
+    columns:
+      - name: cnpj_basico
+        description: "the company cnpj"
+        data_tests:
+          - not_null 
+      - name: nome_empresarial
+        description: "companies names"
+      - name: natureza_juridica
+        description: "legal natures of companies"
+      - name: qualificacao_do_responsavel
+        description: "qualification of the person responsible"
+      - name: capital_social_da_empresa
+        description: "social capital the company"
+      - name: porte_da_empresa
+        description: "company size"
+      - name: ente_federativo_responsavel
+        description: "responsible"

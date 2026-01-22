@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_cnaes
+    description: "fact cnaes"
+
+    columns:
+      - name: codigo
+        description: "Cnaes code"
+        data_tests:
+          - not_null 
+      - name: descricao
+        description: "cnaes description"
+        data_tests:
+          - not_null

@@ -1,0 +1,98 @@
+version: 2
+
+models:
+  - name: estabelecimentos
+    description: "CNPJ establishments (branches and headquarters)"
+
+    columns:
+      - name: cnpj_basico
+        description: "Base CNPJ of the company"
+        tests:
+          - not_null
+
+      - name: cnpj_ordem
+        description: "Branch order number of the CNPJ"
+
+      - name: cnpj_dv
+        description: "Check digits of the CNPJ"
+
+      - name: identificador_matriz_filial
+        description: "Indicates whether the establishment is headquarters (1) or branch (2)"
+
+      - name: nome_fantasia
+        description: "Trade name of the establishment"
+
+      - name: situacao_cadastral
+        description: "Current registration status of the establishment"
+
+      - name: data_da_situacao_especial
+        description: "Date when the current registration status became effective"
+
+      - name: motivo_situacao_cadastral
+        description: "Reason code for the current registration status"
+
+      - name: nome_da_cidade_no_exterior
+        description: "City name if the establishment is located abroad"
+
+      - name: pais
+        description: "Country where the establishment is located"
+        tests:
+          - not_null
+
+      - name: data_de_inicio_atividade
+        description: "Date when the establishment started its activities"
+
+      - name: cnae_fiscal_principal
+        description: "Primary CNAE (economic activity code)"
+        tests:
+          - not_null
+
+      - name: cnae_fiscal_secundaria
+        description: "Secondary CNAE codes"
+
+      - name: tipo_de_logradouro
+        description: "Street type (Rua, Avenida, Travessa, etc.)"
+
+      - name: logradouro
+        description: "Street name"
+
+      - name: numero
+        description: "Street number"
+
+      - name: complemento
+        description: "Additional address information"
+
+      - name: bairro
+        description: "Neighborhood"
+
+      - name: cep
+        description: "Postal code"
+
+      - name: uf
+        description: "State (federative unit)"
+
+      - name: municipio
+        description: "Municipality code"
+        tests:
+          - not_null
+
+      - name: ddd_1
+        description: "Area code of the first phone number"
+
+      - name: telefone_1
+        description: "First phone number"
+
+      - name: ddd_2
+        description: "Area code of the second phone number"
+
+      - name: telefone_2
+        description: "Second phone number"
+
+      - name: correio_eletronico
+        description: "Email address"
+
+      - name: situacao_especial
+        description: "Special legal situation (if applicable)"
+
+      - name: data_situacao_especial
+        description: "Date when the special situation started"

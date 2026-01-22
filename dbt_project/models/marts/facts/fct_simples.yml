@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: simples
+    description: "CNPJ Simples Nacional and MEI option status"
+
+    columns:
+      - name: cnpj_basico
+        description: "Base CNPJ of the company"
+        tests:
+          - not_null
+
+      - name: opcao_pelo_simples
+        description: "Indicates whether the company opted for Simples Nacional (S or N)"
+
+      - name: data_de_opcao_pelo_simples
+        description: "Date when the company opted for Simples Nacional"
+
+      - name: data_de_exclusao_do_simples
+        description: "Date when the company was excluded from Simples Nacional"
+
+      - name: opcao_pelo_mei
+        description: "Indicates whether the company opted for MEI (S or N)"
+
+      - name: data_de_opcao_pelo_mei
+        description: "Date when the company opted for MEI"
+
+      - name: data_de_exclusao_do_mei
+        description: "Date when the company was excluded from MEI"

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_naturezas_juridicas
+    description: "fact naturezas juridicas"
+
+    columns:
+      - name: codigo
+        description: "naturezas juridicas code"
+        data_tests:
+          - not_null 
+      - name: descricao
+        description: "naturezas juridicas description"
+        data_tests:
+          - not_null

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_municipios
+    description: "fact municipios"
+
+    columns:
+      - name: codigo
+        description: "municipios"
+        data_tests:
+          - not_null 
+      - name: descricao
+        description: "municipios description"
+        data_tests:
+          - not_null

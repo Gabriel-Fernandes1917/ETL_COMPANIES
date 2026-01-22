@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: socios
+    description: "Partners, shareholders and legal representatives of CNPJ entities"
+
+    columns:
+      - name: cnpj_basico
+        description: "Base CNPJ of the company"
+        tests:
+          - not_null
+
+      - name: identificador_de_socio
+        description: "Indicates whether the person is a partner, administrator or legal representative"
+
+      - name: nome_do_socio_ou_razao_social
+        description: "Name of the partner or corporate name if legal entity"
+
+      - name: cnpj_cpf_do_socio
+        description: "CPF or CNPJ of the partner"
+
+      - name: qualificacao_do_socio
+        description: "Legal qualification of the partner"
+
+      - name: data_de_entrada_sociedade
+        description: "Date when the partner entered the company"
+
+      - name: pais
+        description: "Country of the partner (if foreign)"
+        tests:
+          - not_null
+
+      - name: representante_legal
+        description: "Indicates if the partner has a legal representative"
+
+      - name: nome_do_representante
+        description: "Name of the legal representative"
+
+      - name: qualificacao_do_representante_legal
+        description: "Legal qualification of the representative"
+
+      - name: faixa_etaria
+        description: "Age range of the partner"

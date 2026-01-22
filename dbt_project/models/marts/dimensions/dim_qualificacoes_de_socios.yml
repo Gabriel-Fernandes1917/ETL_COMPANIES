@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_qualificacoes_de_socios
+    description: "fact qualificacoes de socios"
+
+    columns:
+      - name: codigo
+        description: "qualificacoes de socios code"
+        data_tests:
+          - not_null 
+      - name: descricao
+        description: "qualificacoes de socios description"
+        data_tests:
+          - not_null

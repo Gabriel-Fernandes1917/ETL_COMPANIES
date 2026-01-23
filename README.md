@@ -69,4 +69,7 @@ O projeto utiliza recursos do dbt para garantir qualidade e confiabilidade dos d
 Executar os modelos dbt:
 
 ```bash
+
+cd .\dbt_project\
+
 dbt run
